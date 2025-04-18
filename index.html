@@ -1,60 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>SolScientia Technologies</title>
-</head>
-<style>
-  html,
-  body {
-    padding: 1rem;
-    margin: 0;
-    height: 100%;
-    display: grid;
-    place-content: center;
-    font-family: sans-serif;
-    font-weight: 400;
-  }
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SolScientia Technologies</title>
+  </head>
+  <style>
+    html,
+    body {
+      padding: 1rem;
+      margin: 0;
+      height: 100%;
+      display: grid;
+      place-content: center;
+      font-family: sans-serif;
+      font-weight: 400;
+    }
 
-  * {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-  }
+    * {
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+    }
 
-  div {
-    text-align: center;
-    padding: 2rem 3rem;
-    background-color: rgba(85,119,153,1);
-    /* filter: drop-shadow(3px 3px 5px #000000) drop-shadow(2px 2px 2px #ffcc00); */
-    border-radius: 2rem;
-    box-shadow: 1rem 1rem 1.5rem #5794;
-    border: 2px solid #5792;
-    background: linear-gradient(135deg, #5796 0%, #79B6 100%);
-    color: white;
-    text-shadow: 0.15rem 0.15rem 0.1rem #5796;
-  }
+    div {
+      text-align: center;
+      padding: 2rem 3rem;
+      background-color: rgba(85, 119, 153, 1);
+      /* filter: drop-shadow(3px 3px 5px #000000) drop-shadow(2px 2px 2px #ffcc00); */
+      border-radius: 2rem;
+      box-shadow: 1rem 1rem 1.5rem #5794;
+      border: 2px solid #5792;
+      background: linear-gradient(135deg, #5796 0%, #79B6 100%);
+      color: white;
+      text-shadow: 0.15rem 0.15rem 0.1rem #5796;
+    }
 
-  h3 {
-    text-shadow: none;
-    color: #953;
-  }
+    h3 {
+      text-shadow: none;
+      color: #953;
+    }
 
-  span {
-    font-weight: 400;
-    color: #579;
-  }
-</style>
+    span {
+      font-weight: 400;
+      color: #579;
+    }
+  </style>
 
-<body>
-  <div>
-    <h1>
-      SolScientia Technologies
-    </h1>
-    <h3><span>knowledge</span> | <span>innovation</span> | <span>solution</span> | <span>technology</span> </h3>
-  </div>
-</body>
+  <body>
+    <div id="content">
+      <h1>SolScientia Technologies</h1>
+      <h3><span>knowledge</span> | <span>innovation</span> | <span>solution</span> | <span>technology</span></h3>
+      <p id="countdown">Redirecting to product site... in <span id="timer">10</span> seconds.</p>
+    </div>
+
+    <script>
+      const countdownElement = document.getElementById('timer');
+      let count = 10;
+
+      function updateCountdown() {
+        if (count > 0) {
+          countdownElement.textContent = count;
+          count--;
+        } else {
+          window.location.href = 'https://www.instifusion.com';
+        }
+      }
+
+      setInterval(updateCountdown, 1000);
+    </script>
+  </body>
 
 </html>
